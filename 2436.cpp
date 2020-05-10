@@ -1,26 +1,23 @@
 #include <stdio.h>
+#include <math.h>
 int main(){
-    int a,b,c,d,e,z=1;
+    int a,b,c,d,e,y,z;
     scanf("%d %d",&a,&b);
-    d=a;
-    e=b;
-    while(1){
-        if(a*z==b){
-            break;
-        }
-        if(b%z==0){
-            if(c>(a*z+b/z)){
-                c=a*z+b/z;
-                d=a*z;
-                e=b/z;
+    c=1;
+    d=b/a;
+    for(z=sqrt(d);z>=1;z=z-1){
+        if(d%z==0){
+            e=0;
+            for(y=2;y<=z;y=y+1){
+                if((z%y==0)&((d/z)%y==0)){
+                    e=1;
+                    break;
+                }
+            }
+            if(e==0){
+                printf("%d %d",a*z,a*(d/z));
+                return 0;
             }
         }
-        z=z+1;
-    }
-    if(d<e){
-        printf("%d %d",d,e);
-    }
-    else{
-        printf("%d %d",e,d);
     }
 }
