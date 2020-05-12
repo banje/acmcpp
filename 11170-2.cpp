@@ -1,0 +1,2 @@
+#include <stdio.h>
+int x(int b){int d=10,e=0,f;if(b<0){return-1;}while(b/d){f=d/10;e=e+b/d*f;if((b-b/d*d)/f==0){e=e+b%f+1-f;}d=d*10;}return e;}int main(){int a,b,c,z=0;scanf("%d",&a);for(;z<a;z++){scanf("%d %d",&b,&c);printf("%d\n",x(c)-x(b-1));}}
