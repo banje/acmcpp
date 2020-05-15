@@ -1,28 +1,17 @@
 #include <stdio.h>
-using namespace std;
-
 int main() {
-    int n, m, tc, a;
-    char s[21];
-    char t[21];
-    char *u, *v, *tmp;
-    u = s;
-    v = t;
-    scanf("%d", &tc);
-    while(tc--){
-        a = 0;
-        scanf("%d", &m);
-        while(m--){
-            scanf("%d %s", &n, u);
-            if(a < n){
-                a = n;
-                tmp = u;
-                u = v;
-                v = tmp;
-            }
+    int a,b,c,z;
+    scanf("%d",&a);
+    for(z=0;z<a;z=z+1){
+        scanf("%d %d",&b,&c);
+        if(b==1){
+            printf("0\n");
         }
-        printf("%s", v);
+        else if(b==2){
+            printf("%d\n",c);
+        }
+        else{
+            printf("%d\n",2*c);
+        }
     }
-    return 0;
-
 }
