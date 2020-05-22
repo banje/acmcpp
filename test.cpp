@@ -1,10 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 int main(){
-    int x,y,z;
-    for(y=0;y<1500;y=y+1){
-        for(z=0;z<750;z=z+1){
-            printf(".x");
-        }
-        printf("\n");
-    }
+    printf("%d",strlen("12131214121312151213121412131216121312141213121512131214121312171213121412131215"));
 }
